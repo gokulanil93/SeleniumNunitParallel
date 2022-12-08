@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
-using TestFramework.Utilities.Helper;
 
 namespace TestFramework.Utilities.Extensions
 {
@@ -40,10 +39,10 @@ namespace TestFramework.Utilities.Extensions
         {
             try
             {
-                bool el=false;
+                bool el = false;
                 if (element.Displayed)
                 {
-                   el=true;
+                    el = true;
                 }
                 return el;
             }
@@ -58,7 +57,7 @@ namespace TestFramework.Utilities.Extensions
         /// Method to hover over an element
         /// </summary>
         /// <param name="element"></param>
-        public static void Hover(this IWebElement element,IWebDriver driver)
+        public static void Hover(this IWebElement element, IWebDriver driver)
         {
             try
             {

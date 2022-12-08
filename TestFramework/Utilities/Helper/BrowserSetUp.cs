@@ -16,7 +16,7 @@ namespace TestFramework.Utilities.Helper
         /// </summary>
         public static IWebDriver ConfigureBrowser()
         {
-            
+
             switch (Settings.BrowserType)
             {
                 case "chrome":
@@ -24,7 +24,7 @@ namespace TestFramework.Utilities.Helper
                     //ChromeOptions chromeOptions = new ChromeOptions();
                     //chromeOptions.AddArgument("--headless");
                     webDriver = new ChromeDriver();
-                    
+
                     break;
                 case "firefox":
                     new DriverManager().SetUpDriver(new FirefoxConfig());

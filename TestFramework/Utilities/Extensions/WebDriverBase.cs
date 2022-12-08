@@ -29,7 +29,7 @@ namespace TestFramework.Utilities.Extensions
         /// <summary>
         /// Method to close browser by quiting the webdriver instance
         /// </summary>
-        public  void CloseBrowser()
+        public void CloseBrowser()
         {
             driver.Quit();
         }

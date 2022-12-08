@@ -14,13 +14,13 @@ namespace TestProject.POM
         {
             this.driver = driver;
         }
-        private IWebElement LnkBrand =>FindElemntByxpath("//span[normalize-space()='brands']");
+        private IWebElement LnkBrand => FindElemntByxpath("//span[normalize-space()='brands']");
         private IWebElement LnkMore => FindElemntByxpath("//span[normalize-space()='brands']/..//following-sibling::div//div[@id='verticalsizegroupformat']");
 
         private IWebElement CheckBoxAazingLondon => FindElemntByxpath("//span[normalize-space()='Aazing London']/../..");
         private IWebElement BtnApply => FindElemntByxpath("//button[normalize-space()='Apply']");
 
-        private IWebElement FirstProduct =>FindElemntByxpath("(//div[@class='imgHolder'])[1]//following-sibling::div[@class='contentHolder']");
+        private IWebElement FirstProduct => FindElemntByxpath("(//div[@class='imgHolder'])[1]//following-sibling::div[@class='contentHolder']");
 
         private IWebElement ProductName => FindElemntByxpath("//h2[@class='brand-name']");
         private IWebElement ProductPrice => FindElemntByxpath("//div[@class='prod-sp']");
@@ -82,7 +82,7 @@ namespace TestProject.POM
         {
             string parentWindowHandle = driver.CurrentWindowHandle;
             FindElemntByxpath($"(//div[@class='imgHolder'])[{n}]//following-sibling::div[@class='contentHolder']").Click();
-            
+
             List<string> listOfWindows = driver.WindowHandles.ToList();
             foreach (var el in listOfWindows)
             {

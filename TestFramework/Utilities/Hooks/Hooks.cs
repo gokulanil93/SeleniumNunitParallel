@@ -7,18 +7,17 @@ using System;
 using System.IO;
 using TestFramework.Config;
 using TestFramework.Utilities.Extensions;
-using TestFramework.Utilities.Helper;
 
 namespace TestFramework.Utilities.Hooks
 {
     [SetUpFixture]
-    public class HooksClass 
+    public class HooksClass
     {
         public ExtentTest _test;
         public string filePath;
         public static ExtentReports _extent = new ExtentReports();
         public IWebDriver driver;
-       
+
 
         [OneTimeSetUp]
         public void Setup()

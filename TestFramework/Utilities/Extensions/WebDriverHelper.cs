@@ -1,8 +1,6 @@
 ﻿using AventStack.ExtentReports;
 using OpenQA.Selenium;
 using System;
-using TestFramework.Utilities.Helper;
-using TestFramework.Utilities.Hooks;
 
 namespace TestFramework.Utilities.Extensions
 {
@@ -10,7 +8,7 @@ namespace TestFramework.Utilities.Extensions
 
     {
         private readonly IWebDriver driver;
-        public WebDriverHelper(IWebDriver driver):base(driver)
+        public WebDriverHelper(IWebDriver driver) : base(driver)
         {
             this.driver = driver;
         }
@@ -26,7 +24,7 @@ namespace TestFramework.Utilities.Extensions
                 ExplicitWait("xpath", element, 20);
                 var a = driver.FindElement(By.XPath(element));
                 //LogHelpers.WriteToFile("Element Identification of", element, "Successful");
-                
+
                 return a;
             }
             catch (Exception)

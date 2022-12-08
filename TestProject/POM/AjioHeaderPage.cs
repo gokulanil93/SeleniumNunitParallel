@@ -3,10 +3,10 @@ using TestFramework.Utilities.Extensions;
 
 namespace TestProject.POM
 {
-    public class AjioHeaderPage: WebDriverHelper
+    public class AjioHeaderPage : WebDriverHelper
     {
         private readonly IWebDriver driver;
-        public AjioHeaderPage(IWebDriver driver):base(driver)
+        public AjioHeaderPage(IWebDriver driver) : base(driver)
         {
             this.driver = driver;
         }
@@ -18,7 +18,7 @@ namespace TestProject.POM
         /// </summary>
         public void SelectClothing()
         {
-            WebElementHelper.Hover(LnkMen,driver);
+            WebElementHelper.Hover(LnkMen, driver);
             LnkClothing.Click();
         }
     }
