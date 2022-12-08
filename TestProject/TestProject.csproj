@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="allure-report\**" />
+    <Compile Remove="ErrorScreenshots\**" />
+    <Compile Remove="Log\**" />
+    <Compile Remove="target\**" />
+    <EmbeddedResource Remove="allure-report\**" />
+    <EmbeddedResource Remove="ErrorScreenshots\**" />
+    <EmbeddedResource Remove="Log\**" />
+    <EmbeddedResource Remove="target\**" />
+    <None Remove="allure-report\**" />
+    <None Remove="ErrorScreenshots\**" />
+    <None Remove="Log\**" />
+    <None Remove="target\**" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\Data.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+    <PackageReference Include="NPOI" Version="2.5.6" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="Selenium.Support" Version="4.6.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.6.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="107.0.5304.6200" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.49.0.57237">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="WebDriverManager" Version="2.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestFramework\TestFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TestProject/allure-report
+/TestProject/bin/Debug/netcoreapp3.1
+/TestProject/obj
+/TestProject/target/allure-results
+/TestFramework/obj
+/TestFramework/bin/Debug/netcoreapp3.1
+/.vs/TestFramework
+/TestProject/.sonarqube
+/.sonarqube
